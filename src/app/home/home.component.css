@@ -1,0 +1,21 @@
+table{
+    height: 500px;
+    width: 500px;
+    border: 2px solid blue;
+}
+td{
+    border: 2px solid black;
+}
+
+.div1{
+    color: darkgoldenrod;
+}
+
+.div2{
+    color: rgb(5, 128, 21);
+    font-size: 20px;
+}
+
+.cls{
+    border: 5px solid black;
+}
