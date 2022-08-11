@@ -1,4 +1,4 @@
-<h2>signup</h2>
+<!-- <h2>signup</h2>
 
 <form>
     <div class="form-group">
@@ -17,4 +17,16 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 
     <a [routerLink]="'/login'">alredy have an account? Login</a>
-  </form>
+  </form> -->
+
+
+  
+
+  {{name|uppercase}}
+  {{date|date:'mm:ss'}} 
+  {{rupees|currency}}
+  {{amount|percent}}
+  <br><br>
+  {{students|sort:'ascending'}}
+  <br>
+  {{values|sortNum:'descending'}}

@@ -12,6 +12,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { SortPipe } from './app.sort';
+import { SortNum } from './app.sortNumber';
+import { LoginGuard } from './guard/login.guard';
+import { LoginService } from './service/login.service';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,16 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     PageNotFoundComponent,
     SignupComponent,
     LoginComponent,
-    CourseDetailComponent
+    CourseDetailComponent,
+    SortPipe,
+    SortNum
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap:[AppComponent]
 })
 export class AppModule { }

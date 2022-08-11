@@ -8,15 +8,24 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  
+  username = 'admin'
+  password = '123'
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   login(){
+    if(this.username =='admin' && this.password == '123'){
+      localStorage.setItem('token','admin')
+      this.router.navigate(['home'])
 
-    this.router.navigate(['home'])
+    }
+    else{
+      alert('invalid username or password')
+    }
+
     
   }
 }
