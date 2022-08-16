@@ -82,4 +82,67 @@
 
 <button (click)="clickMe(para)">click</button> -->
 
-<h1>hello</h1>
+<!-- <h1>hello</h1> -->
+<!-- 
+
+
+<form #form=ngForm (ngSubmit)="submit(form)">
+
+    <input type="text" placeholder="username" ngModel="username" 
+    name="username" #username = ngModel required >
+    <span *ngIf="form.touched && username.errors?.['required']">please enter name</span>
+    <br><br>
+    <input type="password" placeholder="password" ngModel="password"
+     
+    name="password" #password  required>
+    <div>
+        <span></span>
+    </div>
+
+    <br><br>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+    {{form.value}}
+</form> -->
+
+
+
+<!-- 
+
+<form #form=ngForm (ngSubmit)="submit(form)">
+
+    <input type="text" placeholder="username" [(ngModel)]="username" 
+    name="username" #usrname ="ngModel" required >
+    <span *ngIf="form.touched && usrname.errors?.['required']">please enter name</span>
+    <br><br>
+    <input type="password" placeholder="password" [(ngModel)]="password"
+     
+    name="password" #paswd ="ngModel"  required>
+    <div>
+        <span></span>
+    </div>
+
+    <br><br>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+    {{form.value}}
+</form> -->
+
+
+
+
+<form [formGroup]="userform" (ngSubmit)="submit()">
+
+    <input type="text" placeholder="username" [(ngModel)]="username" 
+    name="username"  required formControlName="uname">
+    <!-- <span *ngIf="form.touched && usrname.errors?.['required']">please enter name</span> -->
+    <br><br>
+    <input type="password" placeholder="password" [(ngModel)]="password"
+    name="password"  required formControlName="password">
+    <div>
+        <!-- <span *ngIf="form.touched && paswd.errors?.['required']">please enter password</span> -->
+    </div>
+
+    <br><br>
+    <button type="submit">Submit</button>
+    <!-- {{form.value}} -->
+</form> 
+

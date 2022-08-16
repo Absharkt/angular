@@ -16,6 +16,8 @@ import { SortPipe } from './app.sort';
 import { SortNum } from './app.sortNumber';
 import { LoginGuard } from './guard/login.guard';
 import { LoginService } from './service/login.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,12 +31,13 @@ import { LoginService } from './service/login.service';
     LoginComponent,
     CourseDetailComponent,
     SortPipe,
-    SortNum
+    SortNum,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [LoginService],
   bootstrap:[AppComponent]

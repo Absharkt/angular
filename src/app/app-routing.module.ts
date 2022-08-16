@@ -6,6 +6,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { LoginGuard } from './guard/login.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CustomerModule } from './modules/customer/customer.module';
+import { CustomerComponent } from './modules/customer/customer/customer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SignupComponent } from './signup/signup.component';
 
@@ -16,8 +18,9 @@ const routes: Routes = [
   {path:'courses',component:CoursesComponent},
   {path:'home',component:HomeComponent,canActivate:[LoginGuard]},
   {path:'courses/:c_id',component:CourseDetailComponent},
-  {path:'**',component:PageNotFoundComponent}
-
+  {path :'customer',loadChildren:()=>import('./modules/customer/customer.module').then(mod=>mod.CustomerModule)},
+  {path:'**',component:PageNotFoundComponent},
+  
 
 ];
 

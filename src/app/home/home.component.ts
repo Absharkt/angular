@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -62,7 +63,7 @@ export class HomeComponent implements OnInit {
 
   new = false
 
-  username = 'jack'
+  // username = 'jack'
 
   style = true
 
@@ -72,6 +73,22 @@ export class HomeComponent implements OnInit {
     
   }
   
+
+  submit(){
+    // console.log(formData.value);
+    console.log(this.userform.value);
+    
+    
+  }
+
+  username:string = ''
+  password:string = ''
+
+  userform = new FormGroup({
+    uname:new FormControl('john'),
+    password: new FormControl()
+  })
+
   
 }
 
