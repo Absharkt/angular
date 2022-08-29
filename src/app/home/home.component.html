@@ -83,10 +83,10 @@
 <button (click)="clickMe(para)">click</button> -->
 
 <!-- <h1>hello</h1> -->
-<!-- 
 
 
-<form #form=ngForm (ngSubmit)="submit(form)">
+
+<!-- <form #form=ngForm (ngSubmit)="submit(form)">
 
     <input type="text" placeholder="username" ngModel="username" 
     name="username" #username = ngModel required >
@@ -102,16 +102,16 @@
     <br><br>
     <button type="submit" [disabled]="form.invalid">Submit</button>
     {{form.value}}
-</form> -->
+</form>  -->
 
 
 
-<!-- 
 
-<form #form=ngForm (ngSubmit)="submit(form)">
+
+<!-- <form #form=ngForm (ngSubmit)="submit(form)">
 
     <input type="text" placeholder="username" [(ngModel)]="username" 
-    name="username" #usrname ="ngModel" required >
+    name="Uusername" #usrname ="ngModel" required >
     <span *ngIf="form.touched && usrname.errors?.['required']">please enter name</span>
     <br><br>
     <input type="password" placeholder="password" [(ngModel)]="password"
@@ -124,25 +124,58 @@
     <br><br>
     <button type="submit" [disabled]="form.invalid">Submit</button>
     {{form.value}}
-</form> -->
+</form>  -->
 
 
 
-
+<!-- 
 <form [formGroup]="userform" (ngSubmit)="submit()">
 
     <input type="text" placeholder="username" [(ngModel)]="username" 
     name="username"  required formControlName="uname">
-    <!-- <span *ngIf="form.touched && usrname.errors?.['required']">please enter name</span> -->
+                                      <span *ngIf="form.touched && usrname.errors?.['required']">please enter name</span>
     <br><br>
     <input type="password" placeholder="password" [(ngModel)]="password"
     name="password"  required formControlName="password">
     <div>
-        <!-- <span *ngIf="form.touched && paswd.errors?.['required']">please enter password</span> -->
+                                   <span *ngIf="form.touched && paswd.errors?.['required']">please enter password</span>
     </div>
 
     <br><br>
     <button type="submit">Submit</button>
-    <!-- {{form.value}} -->
+                                   {{form.value}} 
 </form> 
+ -->
+
+
+
+
+ <!-- reactive -->
+
+ 
+<form [formGroup] = "userform" (ngSubmit)="login() ">
+
+    <input type="text" placeholder="username" formControlName="uname" 
+    name="username"  required >
+    <span *ngIf="uname!.errors?.['required']">required</span>
+
+
+    <br><br>
+    <input type="password" placeholder="password" formControlName="password"
+     
+    name="password"  required>
+    <div>
+        <span *ngIf="Password?.errors?.['containSpace'] && Password?.touched">erroe</span>
+    </div>
+
+    <br><br>
+
+    <button type="submit">submit</button>
+    <span *ngIf="form.errors?.['invalidLogin']">
+        adminstrator login prohibited
+    </span>
+</form> 
+
+
+
 

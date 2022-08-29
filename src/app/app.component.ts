@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myapp';
+
+
+  username = 'hellooo'
+
+  sendData(value:any){
+    console.log(value);
+    
+  }
+
+  dt:any
+
+  addNum(value:any){
+    console.log(value);
+    this.dt = value
+
+  }
+
 }
+
+

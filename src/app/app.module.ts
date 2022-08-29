@@ -17,6 +17,10 @@ import { SortNum } from './app.sortNumber';
 import { LoginGuard } from './guard/login.guard';
 import { LoginService } from './service/login.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './test/test.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StudentService } from './services/student.service';
+
 
 
 @NgModule({
@@ -32,14 +36,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     CourseDetailComponent,
     SortPipe,
     SortNum,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [LoginService,StudentService],
   bootstrap:[AppComponent]
 })
 export class AppModule { }

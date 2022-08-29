@@ -10,11 +10,13 @@ import { CustomerModule } from './modules/customer/customer.module';
 import { CustomerComponent } from './modules/customer/customer/customer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SignupComponent } from './signup/signup.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/signup',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:'test',component:TestComponent},
   {path:'courses',component:CoursesComponent},
   {path:'home',component:HomeComponent,canActivate:[LoginGuard]},
   {path:'courses/:c_id',component:CourseDetailComponent},

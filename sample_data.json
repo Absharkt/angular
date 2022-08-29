@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "student_id": "101",
+      "student_name": "Abshar",
+      "email": "abshar@gmail.com",
+      "phone": "9898787676",
+      "gender": "male"
+    },
+    {
+      "student_id": "101",
+      "student_name": "Abshar",
+      "email": "abshar@gmail.com",
+      "phone": "9898787676",
+      "gender": "male"
+    },
+    {
+      "student_id": "101",
+      "student_name": "Abshar",
+      "email": "abshar@gmail.com",
+      "phone": "9898787676",
+      "gender": "male"
+    },
+    {
+      "id": "7",
+      "username": "uhyuh",
+      "email": "uhh",
+      "phone": "uh",
+      "gender": "hjb"
+    },
+    {
+      "id": "109",
+      "username": "jnjnj",
+      "email": "njn",
+      "phone": "nnnnjn",
+      "gender": "jnjnj"
+    }
+  ]
+}

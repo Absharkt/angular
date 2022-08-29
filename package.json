@@ -2,6 +2,7 @@
   "name": "myapp",
   "version": "0.0.0",
   "scripts": {
+    "server": "json-server --watch sample_data.json",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

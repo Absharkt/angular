@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { Component, OnInit,Input } from '@angular/core';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { myValidators } from '../custom-validators/space-validators';
 
 @Component({
   selector: 'app-home',
@@ -74,9 +75,9 @@ export class HomeComponent implements OnInit {
   }
   
 
-  submit(){
-    // console.log(formData.value);
-    console.log(this.userform.value);
+  submit(formData:any){
+    console.log(formData.value);
+    // console.log(this.userform.value);
     
     
   }
@@ -85,9 +86,41 @@ export class HomeComponent implements OnInit {
   password:string = ''
 
   userform = new FormGroup({
-    uname:new FormControl('john'),
-    password: new FormControl()
+    uname:new FormControl('john',Validators.required),
+    password: new FormControl('',myValidators.containSpace)
   })
+
+  submitForm(){
+
+  }
+
+  get uname(){
+    return this.userform.get('uname')
+  }
+
+  get Password(){
+    return this.userform.get('password')
+  }
+
+
+  login(){
+    if (this.userform.get('uname')?.value == 'admin'){
+      this.userform.setErrors({invalidLogin:true})
+    }
+
+  }
+get form(){
+  return this.userform;
+}
+
+  
+
+  // @Input() data:any  reusable comp
+
+
+
+
+
 
   
 }

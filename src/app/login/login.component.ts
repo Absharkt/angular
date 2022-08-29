@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,Input,EventEmitter} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -28,4 +28,20 @@ export class LoginComponent implements OnInit {
 
     
   }
+
+  @Output() childData = new EventEmitter()
+  @Output() Data = new EventEmitter()
+
+
+  sendData(){
+
+    this.childData.emit('data from child')
+    
+  }
+
+  num = 1
+  addNum(){
+    this.Data.emit(this.num++)
+  }
+
 }
