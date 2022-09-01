@@ -16,20 +16,20 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.studentService.loadStudent().subscribe((res)=>{
-      console.log(res)
-      this.studentData = res
+  //   this.studentService.loadStudent().subscribe((res)=>{
+  //     console.log(res)
+  //     this.studentData = res
       
-    })
-  }
+  //   })
+  // }
 
-  submitData(data:NgForm){
-    console.log(data.value )
+  // submitData(data:NgForm){
+  //   console.log(data.value )
 
-    this.studentService.postData(data.value).subscribe((res)=>{
+  //   this.studentService.postData(data.value).subscribe((res)=>{
 
-      console.log(res)
-    })
+  //     console.log(res)
+  //   })
     
   }
 

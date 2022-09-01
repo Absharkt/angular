@@ -20,6 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentService } from './services/student.service';
+import { StudentHomeComponent } from './student-home/student-home.component';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
+import { AllStudentsComponent } from './all-students/all-students.component';
 
 
 
@@ -37,6 +41,10 @@ import { StudentService } from './services/student.service';
     SortPipe,
     SortNum,
     TestComponent,
+    StudentHomeComponent,
+    AddStudentComponent,
+    UpdateStudentComponent,
+    AllStudentsComponent,
   ],
   imports: [
     BrowserModule,

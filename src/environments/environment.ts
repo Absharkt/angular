@@ -7,7 +7,7 @@ export const environment = {
 };
 
 
-export const baseUrl = 'http://localhost:3000/'
+export const baseUrl = 'https://digitalschool1.herokuapp.com/teacher/'
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

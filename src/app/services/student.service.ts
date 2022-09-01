@@ -10,15 +10,15 @@ export class StudentService {
   constructor(private httpClient: HttpClient) { }
 
 
-  loadStudent() {
+  // loadStudent() {
 
-    console.log(baseUrl + 'data')
-    return this.httpClient.get(baseUrl + 'data')
-  }
+  //   console.log(baseUrl + 'data')
+  //   return this.httpClient.get(baseUrl + 'data')
+  // }
 
-  postData(student_data: any) {
-    return this.httpClient.post(baseUrl + 'data', student_data)
-  }
+  // postData(student_data: any) {
+  //   return this.httpClient.post(baseUrl + 'data', student_data)
+  // }
 
 
 }
