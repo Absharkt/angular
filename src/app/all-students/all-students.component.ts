@@ -18,7 +18,7 @@ export class AllStudentsComponent implements OnInit {
    
   }
 
-  show = true
+  // show = true
 
   deleteStudent(id:any){
       
@@ -29,7 +29,6 @@ export class AllStudentsComponent implements OnInit {
 
   }
 
-  // =====
 
   studentData(){
     this.student.getStudent().subscribe((res)=>{
@@ -38,6 +37,14 @@ export class AllStudentsComponent implements OnInit {
       
     })
   }
+
+    // =====
+
+    updateData(stud:any){
+      console.log(stud);
+    }
+
+    
 
 
 

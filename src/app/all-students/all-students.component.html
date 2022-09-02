@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 
-<div class="w-75 m-3 p-3" *ngIf="show ==true;">
+<div class="w-75 m-3 p-3">
 
 
   <table class="table table-striped ">
@@ -25,7 +25,7 @@
         <td>{{student.s_address}}</td>
         <td>{{student.s_username}}</td>
         <td>{{student.s_passwd}}</td>
-        <td><button class="btn btn-secondary"  routerLink="/update-student/{{student.id}}">Edit</button>
+        <td><button class="btn btn-secondary"  routerLink="/update-student/{{student.id}}" (click)="updateData(student)">Edit</button>
         <button class="btn btn-secondary"  (click)="deleteStudent(student.id)">Delete</button></td>
       </tr>
     </tbody>

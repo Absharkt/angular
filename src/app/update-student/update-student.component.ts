@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-update-student',
@@ -13,5 +13,6 @@ export class UpdateStudentComponent implements OnInit {
   }
 
   
+  @Input() editStud:any
 
 }

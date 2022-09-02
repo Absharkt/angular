@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NewStudentServiceService } from '../services/new-student-service.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-student',
@@ -8,6 +9,16 @@ import { NewStudentServiceService } from '../services/new-student-service.servic
   styleUrls: ['./add-student.component.css']
 })
 export class AddStudentComponent implements OnInit {
+
+  sub: Subscription = new Subscription
+
+  obs = new Observable((observer)=>{
+    observer.next(1)
+    observer.next(2)
+    observer.next(3)
+    observer.complete()
+    
+  })
 
   constructor(private stud_service: NewStudentServiceService) { }
 
@@ -23,5 +34,8 @@ export class AddStudentComponent implements OnInit {
       
     })
   }
+
+
+
 
 }
